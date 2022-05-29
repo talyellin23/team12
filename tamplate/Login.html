@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/projectCSS1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../static/WELLNESS CROPED.jpg">
+    <script src="../static/project.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <div class="TopAreaContainer">
+            <div id="Logo" class="topAreaGroup">
+                <img src="../static/WELLNESS CROPED.jpg" id="Logo">
+            </div>
+
+            <div id="LogIn" class="topAreaGroup">
+                <button class="topButton" onclick="window.location.href='Login.html'">Log In</button><br>
+            </div>
+        </div>
+
+        <div id="NavBar">
+            <a class="NavLink" href="HomePage.html">Home</a>
+            <a class="NavLink" href="AboutUs.html">About Us</a>
+            <a class="NavLink" href="BMIPage.html">Personal Analysis</a>
+            <a class="NavLink" href="Articles.html">Articles</a>
+            <a class="NavLink" href="FAQ.html">FAQ's</a>
+            <a class="NavLink" href="ContactUs.html">Contact Us</a>
+          </div>
+    </header><br>
+
+
+
+    <main>
+        <section id="login" class="section">
+
+            <br><br><br>
+            <form class="logINForm" action="" method="post">
+                <h3 id="SignIn"> Sign In </h3>
+                <p class="question"> NEW? <a href="Register.html" style="text-decoration:none" class="question"> Create
+                        an account</a> </p>
+                <div class="container">
+                    <label for="uname"><b class="register">User Name </b></label> <br>
+                    <input type="email" placeholder="Enter your Email" name="uname" id="uname" required><br>
+                    <label for="psw"><b class="register">Password</b></label><br>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
+                    <button class="logBtn" id="SignInSubmitBuntton" type="submit">Sign In</button>
+                </div>
+            </form>
+            <br>
+            <br>
+            <br><br>
+        </section>
+    </main>
+    <!-- Page Footer -->
+    <footer class="site-footer">
+        <div class="flex-container">
+            <div id="FooterInfo">Tel: 08-3435227 <br> Email: WellnessLife@gmail.com <br> Address: Rager 34, Beersheva
+            </div>
+            <div id="FooterLink">
+                <a href="ContactUs.html">Contact Us</a>
+            </div>
+            <ul class="social-icons">
+                <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://twitter.com/?lang=he"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="youtube" href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

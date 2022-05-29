@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/projectCSS1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../static/WELLNESS CROPED.jpg">
+    <script defer src="../static/project.js"></script>
+    <title>RegisterPage</title>
+</head>
+
+<body>
+    <header>
+        <div class="TopAreaContainer">
+            <div id="Logo" class="topAreaGroup">
+                <img src="../static/WELLNESS CROPED.jpg" id="Logo">
+            </div>
+
+            <div id="LogIn" class="topAreaGroup">
+                <button class="topButton" onclick="window.location.href='Login.html'">Log In</button><br>
+            </div>
+        </div>
+
+        <div id="NavBar">
+            <a class="NavLink" href="HomePage.html">Home</a>
+            <a class="NavLink" href="AboutUs.html">About Us</a>
+            <a class="NavLink" href="BMIPage.html">Personal Analysis</a>
+            <a class="NavLink" href="Articles.html">Articles</a>
+            <a class="NavLink" href="FAQ.html">FAQ's</a>
+            <a class="NavLink" href="ContactUs.html">Contact Us</a>
+          </div>
+    </header><br>
+
+    <main>
+        <section id="register" class="section"><br>
+            <form class="logINForm" action="" onsubmit="return validUser()">
+                <div class="container">
+                    <h3>Sign Up</h3>
+                    <p class="question"> Already have a user? <a href="Login.html" style="text-decoration:none"
+                            class="question">Sign in</a> </p>
+                    <label for="RegName"><b class="register">Full Name</b></label><br>
+                    <input type="text" placeholder="Enter Name" name="RegName" id="RegName" required> <br>
+                    <label for="email"><b class="register">Email</b></label><br>
+                    <input type="email" placeholder="Enter Email" name="email" id="email" required><br>
+                    <label for="Bday"><b class="register">Date of birth</b></label><br>
+                    <input type="date" name="Bday" id="Bday" max="2006-05-29" min="1922-01-01" required> <br>
+                    <label for="PhoneNum"><b class="register">Phone Number</b></label><br>
+                    <input type="tel" placeholder="Enter phone number" name="PhoneNum" id="PhoneNum"
+                        pattern="[0]{1}[5]{1}[0-9]{8}" required> <br>
+                    <label for="psw"><b class="register">Password</b></label><br>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required> <br>
+                    <label for="psw_repeat"><b class="register">Confirm your password</b></label><br>
+                    <input type="password" placeholder="Enter Password again" name="psw-repeat" id="psw_repeat"
+                        required><br>
+                    <div class="clearfix">
+                        <button type="submit" class="logBtn">Sign up</button>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <br>
+        </section>
+    </main>
+    <!-- Page Footer -->
+    <footer class="site-footer">
+        <div class="flex-container">
+            <div id="FooterInfo">Tel: 08-3435227 <br> Email: WellnessLife@gmail.com <br> Address: Rager 34, Beersheva
+            </div>
+            <ul class="social-icons">
+                <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://twitter.com/?lang=he"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="youtube" href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

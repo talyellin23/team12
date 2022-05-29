@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/projectCSS1.css">
+  <link rel="icon" href="../static/WELLNESS CROPED.jpg">
+  <script defer src="../static/project.js"></script>
+
+  <title>Personal Analysis</title>
+</head>
+<header>
+  <div class="TopAreaContainer">
+    <div id="Logo" class="topAreaGroup">
+      <img src="../static/WELLNESS CROPED.jpg" id="Logo">
+    </div>
+    <div id="LogIn" class="topAreaGroup">
+      <button class="topButton" onclick="window.location.href='Login.html'">Log In</button><br>
+    </div>
+  </div>
+
+  <div id="NavBar">
+    <a class="NavLink" href="HomePage.html">Home</a>
+    <a class="NavLink" href="AboutUs.html">About Us</a>
+    <a class="NavLink" href="BMIPage.html">Personal Analysis</a>
+    <a class="NavLink" href="Articles.html">Articles</a>
+    <a class="NavLink" href="FAQ.html">FAQ's</a>
+    <a class="NavLink" href="ContactUs.html">Contact Us</a>
+  </div>
+</header><br>
+
+<body>
+  <h1>Personal Analysis</h1>
+  <h2>Please fill the required information shown below</h2><br>
+  <div class="BMIBMRInformation" id="BMIData">
+      <h2 class="sectionHeader">BMI & BMR Information</h2>
+      <h2 class="dataQuestion">Age</h2>
+      <div class="slider-wrapper">
+        <input type="range" min="16" max="100" class="slider" id="Weight">
+        <span>50</span>
+      </div>
+      <h2 class="dataQuestion"> Weight</h2>
+      <div class="slider-wrapper">
+        <input type="range" min="10" max="150" class="slider" id="Height">
+        <span>50</span>
+      </div>
+      <h2 class="dataQuestion">Height</h2>
+      <div class="slider-wrapper">
+        <input type="range" min="40" max="240" class="slider" id="Age">
+        <span>50</span>
+      </div>
+      <h2 class="dataQuestion">Gender</h2>
+      <label>
+        <input type="radio" id="Male" name="Gender" value="Male" class="radio-item" required>
+        <span>Male</span>
+      </label>
+      <label>
+        <input type="radio" id="Female" name="Gender" value="Female" class="radio-item">
+        <span>Female</span>
+      </label>
+      <label>
+        <input type="radio" id="Other" name="Gender" value="Other" class="radio-item">
+        <span>Other</span></label>
+  </div><br>
+
+  <div class="containerPersonalData" id="additionalInfo">
+    <h2 class="sectionHeader">Additional Information</h2>
+    <h2 class="dataQuestion">Do you smoke?</h2>
+    <label>
+      <input type="radio" id="Yes" name="Answer" value="Yes" class="radio-item">
+      <span>Yes</span></label>
+    <label>
+      <input type="radio" id="No" name="Answer" value="No" class="radio-item">
+      <span>No</span></label>
+    <h2 class="dataQuestion">What is your level of physical activity?</h2>
+    <label>
+      <input type="radio" id="Low" name="Answer1" value="Low" class="radio-item">
+      <span>Low</span></label>
+    <label>
+      <input type="radio" id="Medium" name="Answer1" value="Medium" class="radio-item">
+      <span>Medium</span></label>
+    <label>
+      <input type="radio" id="High" name="Answer1" value="High" class="radio-item">
+      <span>High</span></label>
+    <h2 class="dataQuestion">Dietary preferences</h2>
+    <label>
+      <input type="radio" id="Vegetarion" name="Answer2" value="Vegetarion" class="radio-item">
+      <span>Vegetarion</span></label>
+    <label>
+      <input type="radio" id="Vegan" name="Answer2" value="Vegan" class="radio-item">
+      <span>Vegan</span></label>
+    <label>
+      <input type="radio" id="Eat_All" name="Answer2" value="EatAll" class="radio-item">
+      <span>I don't have a preferance</span></label>
+  </div><br>
+
+  <div class="containerPersonalData" id="locationStyleDiv">
+    <h2 class="sectionHeader">Location Information</h2>
+    <button id="LocationBtn" onclick="GetLocation()">Share Location</button>
+    <p id="successLocation"></p>
+    <!--Popup Messege Code-->
+    <p class="text"> Why you should share with us?
+      <br>
+      <span class="moreText">At our wesite we can match you with the best <br> professionals in your specific area
+      </span>
+    </p>
+    <button class="readMoreButton">Click hear to read more</button>
+    <!--Popup Messege Code-->
+  </div>
+
+  <br>
+  <button id="submitData" class="SubmitDataButton" onclick="window.location.href='HomePage.html'">Analyze My
+    Data</button>
+  <!--Popup Messege Code-->
+
+  <!-- Page Footer -->
+  <footer class="site-footer">
+    <div class="flex-container">
+      <div id="FooterInfo">Tel: 08-3435227 <br> Email: WellnessLife@gmail.com <br> Address: Rager 34, Beersheva</div>
+      <ul class="social-icons">
+        <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="twitter" href="https://twitter.com/?lang=he"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="youtube" href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+        <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
