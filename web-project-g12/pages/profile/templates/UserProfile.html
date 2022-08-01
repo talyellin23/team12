@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} Update {% endblock %}
+
+{% block Content %}
+    <body>
+    {% if message4 %}
+        <h3 style="color: black">{{ message4 }}</h3>
+    {% endif %}
+    {% if message5 %}
+        <h3 style="color: black">{{ message5 }}</h3>
+    {% endif %}
+    <div class="section">
+        <form class="updateForm" action="/updateProfile_func" method="post">
+            <h2>Update Your Profile</h2>
+            <label for="currentEmail"><b class="register">Your Current Email</b></label><br>
+            <input type="email" placeholder="Enter Current Email" name="currentEmail" id="currentEmail" required> <br>
+            <label for="RegName"><b class="register">Full Name</b></label><br>
+            <input type="text" placeholder="Enter Updated Name" name="RegName" id="RegName"> <br>
+            <label for="PhoneNum"><b class="register">Phone Number</b></label><br>
+            <input type="tel" placeholder="Enter Updated phone number" name="PhoneNum" id="PhoneNum"
+                   pattern="[0]{1}[5]{1}[0-9]{8}"> <br>
+            <label for="psw"><b class="register">Password</b></label><br>
+            <input type="password" placeholder="Enter Updated Password" name="psw" id="psw"> <br>
+            <label for="psw_repeat"><b class="register">Confirm your password</b></label><br>
+            <input type="password" placeholder="Enter Updated Password again" name="psw-repeat" id="psw_repeat"><br>
+            <button type="submit" class="logBtn">Update</button>
+        </form>
+    </div>
+    <div class="section">
+        <form class="updateForm" action="/delete_func" method="post">
+            <h2>Delete Your Profile</h2>
+            <label for="currentEmail"><b class="register">Your Current Email</b></label><br>
+            <input type="email" placeholder="Enter Current Email" name="currentEmail" id="currentEmail" required><br>
+            <label for="psw"><b class="register">Password</b></label><br>
+            <input type="password" placeholder="Enter Updated Password" name="psw" id="psw" required> <br>
+            <button type="submit" class="logBtn">Delete User</button>
+        </form>
+    </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block title %} Personal Analysis {% endblock %}
+
+{% block Content %}
+    <body>
+
+    <form action="/getData" id="bmiForm" method="get">
+        <h1>Personal Analysis</h1>
+        <h2>Please fill the required information shown below</h2><br>
+        <div class="BMIBMRInformation" id="BMIData">
+            <h2 class="sectionHeader">BMI & BMR Information</h2>
+            <h2 class="dataQuestion">Age</h2>
+            <div class="slider-wrapper">
+                <input type="range" min="16" max="100" class="slider" id="Age" name="Age">
+                <span>50</span>
+            </div>
+            <h2 class="dataQuestion"> Weight</h2>
+            <div class="slider-wrapper">
+                <input type="range" min="10" max="150" class="slider" id="Weight" name="Weight">
+                <span>50</span>
+            </div>
+            <h2 class="dataQuestion">Height</h2>
+            <div class="slider-wrapper">
+                <input type="range" min="40" max="240" class="slider" id="Height" name="Height">
+                <span>50</span>
+            </div>
+            <h2 class="dataQuestion">Gender</h2>
+            <label for="Male">
+                <input type="radio" id="Male" name="Gender" value="Male" class="radio-item" variable="btn1" required>
+                <span>Male</span>
+            </label>
+            <label for="Female">
+                <input type="radio" id="Female" name="Gender" value="Female" class="radio-item" variable="btn1">
+                <span>Female</span>
+            </label>
+            <label for="Other">
+                <input type="radio" id="Other" name="Gender" value="Other" class="radio-item" variable="btn1">
+                <span>Other</span>
+            </label>
+        </div>
+        <br>
+
+        <div class="containerPersonalData" id="additionalInfo">
+            <h2 class="sectionHeader">Additional Information</h2>
+            <h2 class="dataQuestion">Do you smoke?</h2>
+            <label>
+                <input type="radio" id="Yes" name="Smoker" value="Yes" class="radio-item" variable="btn2">
+                <span>Yes</span></label>
+            <label>
+                <input type="radio" id="No" name="Smoker" value="No" class="radio-item" variable="btn2">
+                <span>No</span></label>
+            <h2 class="dataQuestion">What is your level of physical activity?</h2>
+            <label>
+                <input type="radio" id="Low" name="Answer1" value="Low" class="radio-item">
+                <span>Low</span></label>
+            <label>
+                <input type="radio" id="Medium" name="Answer1" value="Medium" class="radio-item">
+                <span>Medium</span></label>
+            <label>
+                <input type="radio" id="High" name="Answer1" value="High" class="radio-item">
+                <span>High</span></label>
+            <h2 class="dataQuestion">Dietary preferences</h2>
+            <label>
+                <input type="radio" id="Vegetarian" name="Answer2" value="Vegetarian" class="radio-item">
+                <span>Vegetarian</span></label>
+            <label>
+                <input type="radio" id="Vegan" name="Answer2" value="Vegan" class="radio-item">
+                <span>Vegan</span></label>
+            <label>
+                <input type="radio" id="Eat_All" name="Answer2" value="EatAll" class="radio-item">
+                <span>I don't have a preference</span></label>
+        </div>
+        <br>
+        <div class="containerPersonalData" id="locationStyleDiv">
+            <form id="locationForm" action="/getLocation">
+                <h2 class="sectionHeader">Location Information</h2>
+                <button form="locationForm" id="LocationBtn" onclick="GetLocation()">Share Location</button>
+                <p id="successLocation"></p>
+                <span>At our website we can match you with the best professionals in your specific area!</span>
+            </form>
+        </div>
+        <br>
+    </form>
+
+    {% if session.login %}
+        <button form="bmiForm" id="submitData" class="SubmitDataButton"
+                onclick="window.location.href='BMIResults.html'">Analyze My Data</button>
+    {% else %}
+        <h4>If you wish to see your results, please log in to our website</h4>
+        <button id="LocationBtn" onclick="window.location.href='/Login'">Log in</button>
+    {% endif %}
+
+    </body>
+{% endblock %}

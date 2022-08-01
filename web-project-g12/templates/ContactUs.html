@@ -1,0 +1,37 @@
+{% extends 'Base.html' %}
+{% block title %} Contact Us {% endblock %}
+
+{% block Content %}
+    <body>
+    <div class="contactDiv">
+        <h1>Contact Us</h1>
+        <span class="contactForm">Please leave your information, and we will contact you soon!</span><br><br>
+        <form action="/" method="get">
+            <label for="FullName" class="contactForm writingForm">Full Name</label><br>
+            <input type="text" id="FullName" name="FullName" class="contactForm" autocomplete="on" required><br>
+            <label for="Email" class="contactForm writingForm">Email</label><br>
+            <input type="email" id="Email" name="Email" class="contactForm" required><br>
+            <label for="PhoneNumber" class="contactForm writingForm">Phone Number</label><br>
+            <input type="tel" id="PhoneNumber" class="contactForm" name="PhoneNumber" required
+                   minlength="9" maxlength="10" pattern="[0]{1}[5]{1}[0-9]{8}"> <br><br><br>
+            <label for="timeOfContact" class="contactForm">Preferred time to contact you</label>
+            <input type="time" class="contactForm" id="timeOfContact"
+                   min="08:00"
+                   max="17:00"><br><br>
+            <label for="reason" class="contactForm">Please choose - how can we help you</label><br><br>
+            <select id="reason" name="reason" class="contactForm" required>
+                <option value="consult">I want to consult your expert</option>
+                <option value="result">I don't understand the result i got</option>
+                <option value="error">The website doesn't work properly</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <label for="check" class="contactForm">I'm above the age of 16</label><br>
+            <input type="checkbox" name="age" id="check" class="contactForm" required><br><br>
+            <button id="contactSubmit" class="contactForm">Submit</button>
+            <br><br>
+        </form>
+    </div>
+    <br>
+
+    </body>
+{% endblock %}

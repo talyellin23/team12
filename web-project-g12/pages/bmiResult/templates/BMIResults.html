@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %} Results {% endblock %}
+
+{% block Content %}
+    <body>
+    <h1>Your Results</h1>
+    <div class="allResults">
+        <div class="containerResult" id="BMIResult">
+            <h1>BMI Calculator</h1>
+            <br>
+            <div class="display">
+                <p id="category">Your BMI is:</p>
+                <h2 style="color: black">{{ session['BMI'] }}</h2>
+            </div>
+        </div>
+        <br>
+        <div class="containerResult" id="BMRResult">
+            <h1>BMR Calculator</h1>
+            <br>
+            <div class="display">
+                <h2> {{ session['BMR'] }} <br><br> Kcal </h2>
+                <p id="category">Your Daily <br> Calorie Loss</p>
+            </div>
+        </div>
+
+        <div class="Recommendations" id="Recommendations">
+            <h2>Result Explanation</h2>
+            <div id="resultsExplain"><p></p>
+                <h3 style="color: black">{{ session['massage'] }}</h3>
+                <br></div>
+            <h4>Based on your preference, click here for a menu for you:</h4>
+            <button id="LocationBtn" onclick="window.location.href='/menus'">Menu for you</button>
+        </div>
+    </div>
+    <br>
+
+    <h1 id="expertsHeader">Experts</h1>
+    <div class="calculator">
+        <div id="tableContainer">
+            <div id="table-scroll">
+                <table>
+                    <thead>
+                    <tr>
+                        <th><span class=""></span></th>
+                        <th><span class="text">Full Name</span></th>
+                        <th><span class="text">Specialty</span></th>
+                        <th><span class="text">Reign</span></th>
+                        <th><span class="text">Address</span></th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {% if expertsRes %}
+                        {% for i in range(0,length) %}
+                            <tr>
+                                <td>{{ i + 1 }}</td>
+                                <td>{{ expertsRes[i][1] }}</td>
+                                <td>{{ expertsRes[i][2] }}</td>
+                                <td>{{ expertsRes[i][3] }}</td>
+                                <td>{{ expertsRes[i][4] }}</td>
+                                <td>{{ expertsRes[i][5] }}</td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="expertsMap">
+            <iframe
+                    src="https://www.google.com.qa/maps/d/u/0/embed?mid=159fqYT3XGtE-JhB8yzhdGM9KyoNLM94X&ehbc=2E312F"
+                    width="650" height="480"></iframe>
+        </div>
+
+    </div>
+
+    </body>
+{% endblock %}

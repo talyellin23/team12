@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} Menus {% endblock %}
+
+{% block Content %}
+
+    <body>
+    <h1>Recommended Menu</h1>
+    <h3>This menu suits you based on the preference you noted</h3>
+    <div class=menuContainer>
+        {% if message11 %}
+            {% if message11 == 'Vegetarian' %}
+            <img class="menusImages" src="/static/img/vegetarian.jpeg" alt="imgVeg"><br>
+            {% endif %}
+            {% if message11 == 'Vegan' %}
+            <img class="menusImages" src="/static/img/vegan.jpeg" alt="imgVegan"><br>
+            {% endif %}
+            {% if message11 == 'eat all' %}
+            <img class="menusImages" src="/static/img/eatAll.jpeg" alt="imgAll"><br>
+            {% endif %}
+        {% endif %}
+    </div>
+    </body>
+{% endblock %}

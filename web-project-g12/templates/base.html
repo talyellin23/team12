@@ -1,0 +1,66 @@
+<script defer src="../static/js/project.js"></script>
+<link rel="stylesheet" href="../static/css/projectCSS1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>{% block title %}{% endblock %}</title>
+{% block Logo %}
+    <link rel="icon" href="../static/img/WELLNESS CROPED.jpg">
+    <div class="TopAreaContainer">
+        <div id="Logo" class="topAreaGroup">
+            <img alt="logo" src="/static/img/WELLNESS CROPED.jpg" id="Logo">
+        </div>
+        <div id="LogIn" class="topAreaGroup">
+            {% if session.login %}
+                <form action="/logout_func" method="post">
+                    <button type="submit" class="loggedBtn">Log Out</button>
+                </form>
+                <button id="update" class="loggedBtn" onclick="window.location.href='/UserProfile'">Update</button>
+            {% else %}
+                <button class="topButton" onclick="window.location.href='/Login'">Log In</button>
+            {% endif %}
+            <br>
+        </div>
+    </div>
+{% endblock %}
+{% block Nav %}
+    <header>
+    <div id="NavBar">
+        <a class="NavLink" href="/HomePage">Home</a>
+        <a class="NavLink" href="/AboutUs">About Us</a>
+        <a class="NavLink" href="/BMIPage">Personal Analysis</a>
+        <a class="NavLink" href="/Articles">Articles</a>
+        <a class="NavLink" href="/FAQ">FAQ's</a>
+        <a class="NavLink" href="/ContactUs">Contact Us</a>
+    </div>
+</header>
+{% endblock %}
+<br>
+{% block session %}
+    {% if session.login %}
+        <h2>Welcome {{ session.username }}</h2>
+    {% else %}
+        <h2>Hello Guest</h2>
+    {% endif %}
+{% endblock %}
+{% block Content %}
+    <body>
+
+    <h1>Message from BASE Page!</h1>
+    </body>
+{% endblock %}
+
+{% block Footer %}
+    <footer class="site-footer">
+    <div class="flex-container">
+        <div id="FooterInfo">Tel: 08-3435227 <br> Email: WellnessLife@gmail.com <br> Address: Rager 34, Beersheva
+        </div>
+        <ul class="social-icons">
+            <li><a class="facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="https://twitter.com/?lang=he"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="youtube" href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+</footer>
+{% endblock %}
+

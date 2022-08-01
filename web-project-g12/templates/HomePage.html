@@ -1,0 +1,58 @@
+{% extends 'Base.html' %}
+{% block title %} Home {% endblock %}
+
+{% block Content %}
+<body>
+<br>
+  <div id="welcomeImage">
+    <h1 id="welcome">Welcome to WELLNESS LIFE</h1>
+  </div>
+  <div id="welcomeExplain">
+    Our team through the website offers you to examine your health, weight and nutrition to be a better you. <br>
+    Through the calculation of BMI and BMR and other information, we can <br> provide you with solutions and suggestions
+    for improvement. <br>
+    The health in the center.
+  </div>
+
+  <div id=startProcessDiv>
+    <button id="startProcessBtn" class="calcBtn" onclick="window.location.href='/BMIPage'">Let's Start The
+      Process</button><br>
+  </div>
+
+  <div class="homeBox">
+    <div id=explnationDiv class="contExpl">
+      <div id="BMR">
+        <h2>What is BMR?</h2>
+        <p class="explenation">Basal Metabolic Rate (BMR) is the total number of calories that your body needs to
+          perform basic,
+          life-sustaining functions. These basal functions include circulation, breathing,
+          and more. Understand your body in a better way with us.</p> <br>
+      </div>
+      <div id="BMI">
+        <h2>What is BMI?</h2>
+        <p class="explenation"> Body Mass Index (BMI) calculates the weight-height relation. BMI is an
+          inexpensive and easy screening method for weight category — underweight,
+          healthy weight, overweight, and obesity.</p> <br>
+      </div>
+    </div>
+
+    <div id="RecipesDiv" class="bottomDivs">
+      <h3 class="LearnHeader">Did You Know?</h3>
+      <span>100 Calories - not what you think</span><br>
+      <button id="Recipes" class="HomeBtn" onclick="window.location.href='/CaloriesPage'">Read More</button>
+    </div>
+
+    <div id="ArticlesDiv" class="bottomDivs">
+      <h3 class="LearnHeader">Articles</h3>
+      <span>Access articles to help you stay healthy.</span><br>
+      <button id="Articles" class="HomeBtn" onclick="window.location.href='/Articles'">View Articles</button>
+    </div>
+
+    <div id="LearnMoreDiv" class="bottomDivs">
+      <h3 class="LearnHeader">Who Are We?</h3>
+      <span>Want to get to know us better?</span><br>
+      <button id="LearnMore" class="HomeBtn" onclick="window.location.href='/AboutUs'">Wellness Life</button>
+    </div>
+  </div><br><br>
+</body>
+{% endblock %}

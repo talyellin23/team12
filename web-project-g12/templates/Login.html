@@ -1,0 +1,29 @@
+{% extends 'Base.html' %}
+{% block title %} Login {% endblock %}
+
+{% block Content %}
+    <body>
+    <main>
+        <section id="login" class="section">
+
+            <br><br><br>
+            <form class="logINForm" action="" method="post">
+                <h3 id="SignIn"> Sign In </h3>
+                <p class="question"> NEW? <a href="Register.html" style="text-decoration:none" class="question"> Create
+                    an account</a></p>
+                <div class="container">
+                    <label for="uname"><b class="register">User Name </b></label> <br>
+                    <input type="email" placeholder="Enter your Email" name="uname" id="uname" required><br>
+                    <label for="psw"><b class="register">Password</b></label><br>
+                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
+                    <button class="logBtn" id="SignInSubmitButton" type="submit">Sign In</button>
+                </div>
+            </form>
+            <br>
+            <br>
+            <br><br>
+        </section>
+    </main>
+
+    </body>
+{% endblock %}

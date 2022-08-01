@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %} Contact Us {% endblock %}
+
+{% block Content %}
+    <body>
+    <div class="section">
+        <span class="contactForm">Please leave your information, and we will contact you soon!</span><br><br>
+        <form action="/contact_func" method="post">
+            <h1>Contact Us</h1>
+            {% if message6 %}
+                <h5 style="color: black">{{ message6 }}</h5>
+            {% endif %}
+            <label for="FullName" class="contactForm">Full Name</label><br>
+            <input type="text" id="FullName" placeholder="Enter Name" name="FullName" class="contactForm"
+                   autocomplete="on" required><br>
+            <label for="Email" class="contactForm">Email</label><br>
+            <input type="email" id="Email" name="Email" placeholder="Enter Email" class="contactForm" required><br>
+            <label for="PhoneNumber" class="contactForm">Phone Number</label><br>
+            <input type="tel" id="PhoneNumber" class="contactForm" placeholder="Enter Phone Number" name="PhoneNumber"
+                   required
+                   minlength="9" maxlength="10" pattern="[0]{1}[5]{1}[0-9]{8}"> <br><br>
+            <label for="timeOfContact" class="contactForm">Preferred time to contact you</label>
+            <input type="time" class="contactForm" id="timeOfContact" min="08:00" max="17:00"
+                   name="timeOfContact"><br><br>
+            <label for="reason" class="contactForm">Please choose - how can we help you</label><br><br>
+            <select id="reason" name="reason" class="contactForm" required>
+                <option value="consult">I want to consult your expert</option>
+                <option value="result">I don't understand the result I got</option>
+                <option value="error">The website doesn't work properly</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <label for="check" class="contactForm">I'm above the age of 16</label><br>
+            <input type="checkbox" name="age" id="check" class="contactForm" required><br><br>
+            <button id="contactSubmit" class="contactForm">Submit</button>
+            <br><br>
+        </form>
+    </div>
+    <br>
+
+    </body>
+{% endblock %}

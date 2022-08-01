@@ -1,0 +1,96 @@
+{% extends 'Base.html' %}
+{% block title %} Results {% endblock %}
+
+{% block Content %}
+<body>
+    <h1>Your Results</h1>
+        <div class="allResults">
+            <div class="containerResult" id="BMIResult">
+                <h1>BMI Calculator</h1>
+                <br>
+                <div class="display">
+                    <p id="result">20.0</p>
+                    <p id="category">Normal weight </p>
+                </div>
+            </div>
+            <br>
+            <div class="containerResult" id="BMRResult">
+                <h1>BMR Calculator</h1>
+                <br>
+                <div class="display">
+                    <p id="result">1,300 Kcal</p>
+                    <p id="category">Your Daily <br> Calorie Loss</p>
+                </div>
+            </div>
+
+            <div class="Recommendations" id="Recommendations">
+                <h3>Result Explanation</h3>
+                <div id="resultsExplain">Your BMI: _____ <br><br><br>
+                    Your BMR:_____ <br><br><br>
+                    Based on the fact you are a smoker: <br><br><br>
+                    Based on your activity level: <br> </div>
+            </div>
+        </div>
+        <br>
+
+        <h1 id="expertsHeader">Experts</h1>
+        <div class="calculator">
+        <div id="tableContainer">
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Family Name</th>
+                    <th>Specialty</th>
+                    <th>Reign</th>
+                    <th>Address</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Omer</td>
+                    <td>Azulay</td>
+                    <td>Nutritionist</td>
+                    <td>south</td>
+                    <td>Kadesh 30</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Maor</td>
+                    <td>Minay</td>
+                    <td>Personal trainer</td>
+                    <td>north</td>
+                    <td>operation Horev 20</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hen</td>
+                    <td>Levi</td>
+                    <td>Rehab Institute</td>
+                    <td>center</td>
+                    <td>Through Yatir 20</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Adi</td>
+                    <td>Yamin</td>
+                    <td>Nutritionist</td>
+                    <td>north</td>
+                    <td>Wingate 15</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Ella</td>
+                    <td>Gilad</td>
+                    <td>Family Doctor</td>
+                    <td>center</td>
+                    <td>Eliezer Ben Yeuda 15</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="expertsMap"><iframe
+                src="https://www.google.com.qa/maps/d/u/0/embed?mid=159fqYT3XGtE-JhB8yzhdGM9KyoNLM94X&ehbc=2E312F"
+                width="650" height="480"></iframe></div>
+    </div>
+</body>
+{% endblock %}
